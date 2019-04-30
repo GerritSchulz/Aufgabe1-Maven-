@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="13fc1adc-b25e-4fec-afb6-b702f0eb2c25" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aufgabe1/Comparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aufgabe1/Comparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aufgabe1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aufgabe1/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Aufgabe1/Comparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Aufgabe1/Comparator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Aufgabe1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Aufgabe1/Main.class" afterDir="false" />
     </list>
@@ -56,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Aufgabe1/JsonOutput.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+              <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -234,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556615974181</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="- new method in Comparator, that convert the results to JSON format&#10;- new class: JsonOutput. Created to fit the right output format&#10;- some minor comment changes">
+      <created>1556619180773</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1556619180773</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -282,7 +287,8 @@
     <MESSAGE value="Start tis as a Maven project" />
     <MESSAGE value="Start this as a Maven project" />
     <MESSAGE value="- Added Gson support&#10;- Changed the check method. They now return the result as an ArrayList" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added Gson support&#10;- Changed the check method. They now return the result as an ArrayList" />
+    <MESSAGE value="- new method in Comparator, that convert the results to JSON format&#10;- new class: JsonOutput. Created to fit the right output format&#10;- some minor comment changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="- new method in Comparator, that convert the results to JSON format&#10;- new class: JsonOutput. Created to fit the right output format&#10;- some minor comment changes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java" />
@@ -352,7 +358,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Aufgabe1/JsonOutput.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
