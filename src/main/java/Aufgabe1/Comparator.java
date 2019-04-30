@@ -7,11 +7,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Read in .txt files, put them in an ArrayList.
+ * Also provides methods to check for common entries in the files and which entries are only present in one of the files.
+ */
 public class Comparator {
-
-    Comparator(){}
-
-    // Read in the entries from a .txt list and return them in an ArrayList
 
     /**
      * Reads in a String (path to file) and read this file line by line and returns it in an ArrayList
@@ -37,21 +37,6 @@ public class Comparator {
         return names;
     }
 
-/*    private static void checkForCommon(String list1, String list2){
-        ArrayList<String> namesOfList1 = listToArray(list1);
-        ArrayList<String> namesOfList2 = listToArray(list2);
-        namesOfList1.retainAll(namesOfList2);
-        System.out.println("Common: " + namesOfList1);
-    }*/
-
-/*    private static void checkForDifference(String list1, String list2){
-        ArrayList<String> namesOfList1 = listToArray(list1);
-        ArrayList<String> namesOfList2 = listToArray(list2);
-        namesOfList1.removeAll(namesOfList2);
-        System.out.println("Difference: " + namesOfList1);
-    }*/
-
-    //----------------------------------------------------------------------------------
     //Check methods with return value
     private static ArrayList<String> checkForCommon(String list1, String list2){
         ArrayList<String> namesOfList1 = listToArray(list1);
@@ -76,18 +61,15 @@ public class Comparator {
      * @param list2 String (Path to list file)
      */
     public void compareLists(String list1, String list2){
-
-        Gson gsonObj = new Gson();
-
         checkForCommon(list1,list2);
         checkForDifference(list1,list2);
         checkForDifference(list2,list1);
+    }
 
-
-        System.out.println(gsonObj.toJson(checkForCommon(list1,list2)));
-
-        //
-        // TODO: Ausgabe an Ausgabeformat anpassen -> JSON PlugIn?
+    public String serializeCompareList(String list1, String list2){
+        JsonOutput jsonOut = new JsonOutput(checkForDifference(list1,list2),checkForDifference(list2,list1),checkForCommon(list1,list2));
+         String json = new Gson().toJson(jsonOut);
+        return json;
     }
 
 

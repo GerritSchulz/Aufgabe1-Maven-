@@ -9,5 +9,6 @@ public class Main {
         Comparator comp = new Comparator();
         comp.compareLists(list1,list2);
 
+        System.out.println(comp.serializeCompareList(list1,list2));
     }
 }
