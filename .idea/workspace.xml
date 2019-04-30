@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13fc1adc-b25e-4fec-afb6-b702f0eb2c25" name="Default Changelist" comment="">
+    <list default="true" id="13fc1adc-b25e-4fec-afb6-b702f0eb2c25" name="Default Changelist" comment="- new method in Comparator, that convert the results to JSON format&#10;- new class: JsonOutput. Created to fit the right output format&#10;- some minor comment changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Aufgabe1/Comparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Aufgabe1/Comparator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Aufgabe1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Aufgabe1/Main.class" afterDir="false" />
@@ -239,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556619180773</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="- new method in Comparator, that convert the results to JSON format&#10;- new class: JsonOutput. Created to fit the right output format&#10;- some minor comment changes">
+      <created>1556620264707</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1556620264707</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -253,7 +260,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1073" y="0" width="854" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21032746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -264,13 +270,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49370277" visible="true" weight="0.33150986" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49370277" weight="0.33150986" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989339" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.32936078" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50629723" side_tool="true" visible="true" weight="0.33150986" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50629723" side_tool="true" visible="true" weight="0.32822758" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32932165" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49244332" weight="0.32822758" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
