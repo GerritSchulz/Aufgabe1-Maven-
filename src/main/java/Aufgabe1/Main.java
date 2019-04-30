@@ -8,5 +8,6 @@ public class Main {
 
         Comparator comp = new Comparator();
         comp.compareLists(list1,list2);
+
     }
 }

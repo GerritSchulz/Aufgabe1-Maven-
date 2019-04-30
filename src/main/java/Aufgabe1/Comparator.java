@@ -1,15 +1,13 @@
 package Aufgabe1;
 
+import com.google.gson.Gson;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class Comparator {
-
-    //TO-DO:
-    // Create method, that return an ArrayList
-    // CompareArrays calls the saveInArray method twice and start to compare it
 
     Comparator(){}
 
@@ -39,18 +37,36 @@ public class Comparator {
         return names;
     }
 
-    private static void checkForCommon(String list1, String list2){
+/*    private static void checkForCommon(String list1, String list2){
         ArrayList<String> namesOfList1 = listToArray(list1);
         ArrayList<String> namesOfList2 = listToArray(list2);
         namesOfList1.retainAll(namesOfList2);
         System.out.println("Common: " + namesOfList1);
-    }
+    }*/
 
-    private static void checkForDifference(String list1, String list2){
+/*    private static void checkForDifference(String list1, String list2){
         ArrayList<String> namesOfList1 = listToArray(list1);
         ArrayList<String> namesOfList2 = listToArray(list2);
         namesOfList1.removeAll(namesOfList2);
         System.out.println("Difference: " + namesOfList1);
+    }*/
+
+    //----------------------------------------------------------------------------------
+    //Check methods with return value
+    private static ArrayList<String> checkForCommon(String list1, String list2){
+        ArrayList<String> namesOfList1 = listToArray(list1);
+        ArrayList<String> namesOfList2 = listToArray(list2);
+        namesOfList1.retainAll(namesOfList2);
+        System.out.println("Common: " + namesOfList1);
+        return namesOfList1;
+    }
+
+    private static ArrayList<String> checkForDifference(String list1, String list2){
+        ArrayList<String> namesOfList1 = listToArray(list1);
+        ArrayList<String> namesOfList2 = listToArray(list2);
+        namesOfList1.removeAll(namesOfList2);
+        System.out.println("Difference: " + namesOfList1);
+        return namesOfList1;
     }
 
     /**
@@ -61,9 +77,14 @@ public class Comparator {
      */
     public void compareLists(String list1, String list2){
 
+        Gson gsonObj = new Gson();
+
         checkForCommon(list1,list2);
         checkForDifference(list1,list2);
         checkForDifference(list2,list1);
+
+
+        System.out.println(gsonObj.toJson(checkForCommon(list1,list2)));
 
         //
         // TODO: Ausgabe an Ausgabeformat anpassen -> JSON PlugIn?
