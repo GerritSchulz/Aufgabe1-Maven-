@@ -38,38 +38,57 @@ public class Comparator {
     }
 
     //Check methods with return value
+
+    /**
+     * Checking for common entries in both lists.
+     * Takes the first list and manipulates it.
+     * @param list1 String, file and path to the first list
+     * @param list2 String, file and path to the second list
+     * @return ArrayList
+     */
     private static ArrayList<String> checkForCommon(String list1, String list2){
         ArrayList<String> namesOfList1 = listToArray(list1);
         ArrayList<String> namesOfList2 = listToArray(list2);
         namesOfList1.retainAll(namesOfList2);
-        System.out.println("Common: " + namesOfList1);
         return namesOfList1;
     }
 
+    /**
+     * Checking for differences in both lists.
+     * Takes the first list and manipulates it.
+     * @param list1 String, file and path to the first list
+     * @param list2 String, file and path to the second list
+     * @return ArrayList
+     */
     private static ArrayList<String> checkForDifference(String list1, String list2){
         ArrayList<String> namesOfList1 = listToArray(list1);
         ArrayList<String> namesOfList2 = listToArray(list2);
         namesOfList1.removeAll(namesOfList2);
-        System.out.println("Difference: " + namesOfList1);
         return namesOfList1;
     }
 
     /**
      * Reads in two .txt files (lists) and compare them.
      * What elements are only in list1, list 2 and which are in both?
+     * Prints the result to the console.
      * @param list1 String (Path to list file)
      * @param list2 String (Path to list file)
      */
     public void compareLists(String list1, String list2){
-        checkForCommon(list1,list2);
-        checkForDifference(list1,list2);
-        checkForDifference(list2,list1);
+        System.out.println("In both lists: " + checkForCommon(list1,list2));
+        System.out.println("Only in list1" + checkForDifference(list1,list2));
+        System.out.println("Only in list2" + checkForDifference(list2,list1));
     }
 
-    public String serializeCompareList(String list1, String list2){
+    /**
+     * Reads in two Strings (path to list file) and returns a json as a String
+     * @param list1 String (Path to list file)
+     * @param list2 String (Path to list file)
+     * @return String (json format)
+     */
+    public String serializeCompareLists(String list1, String list2){
         JsonOutput jsonOut = new JsonOutput(checkForDifference(list1,list2),checkForDifference(list2,list1),checkForCommon(list1,list2));
-         String json = new Gson().toJson(jsonOut);
-        return json;
+        return new Gson().toJson(jsonOut);
     }
 
 

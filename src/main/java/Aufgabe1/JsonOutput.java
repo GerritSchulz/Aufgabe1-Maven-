@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * Created to fit the right json output format
  */
 public class JsonOutput {
 
